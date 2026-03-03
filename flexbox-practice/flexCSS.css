@@ -1,0 +1,43 @@
+
+body {
+    background-color: seagreen;
+}
+
+p {
+    color: white;
+}
+
+.flexbox {
+    min-height: 800px;
+    border: 8px solid black;
+
+    display: flex;  /* Makes div a flexbox */
+    flex-direction: row; /* Adjust order of containers */
+    justify-content: flex-end; /* Adjust placement of containers */
+    align-items: center; /* Adjusts alignment of containers along cross axis of every flexbox line individually */
+    align-content: center; /* Adjusts alignment of all flexbox lines together */
+    gap: 0px; /* Creates space between containers, similar to margin command */
+    flex-wrap: nowrap; /* Determines whether containers keep their shape or expand/contract with window size */
+    
+}
+
+.container {
+    height: 200px;
+    width: 200px;
+    border: solid white 2px;
+    background-color: rosybrown;
+    font-size: 25pt;
+
+    /* flexbox controls */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Controls how much containers are allowed to shrink, 0 means no shrinkage, 1 means automatic resizing */
+    flex-grow: 0; /* Controls how much containers can grow */
+    /* min-width and amx-width limit how much containers can grow and shrink */
+}
+
+#box1 {
+    flex-shrink: 0;
+    margin-right: auto; /* Keeps box1 on the right side of the screen even if the flexbox is aligned at flex-end. */
+}
